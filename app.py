@@ -25,7 +25,7 @@ st.markdown("""
         font-size: 48px;
         font-weight: 800;
         text-align: center;
-        color: #ff6b00;
+        color: #00000;
         margin-top: 10px;
         margin-bottom: 5px;
     }
@@ -55,7 +55,7 @@ st.markdown("""
     }
 
     .card h3 {
-        color: #ff6b00;
+        color: #00000;
         margin-bottom: 10px;
     }
 
@@ -67,7 +67,7 @@ st.markdown("""
 
     /* BUTTONS */
     div.stLinkButton > a {
-        background-color: #ff6b00 !important;
+        background-color: #00000 !important;
         color: white !important;
         border-radius: 10px !important;
         border: none !important;
@@ -96,7 +96,7 @@ st.markdown("""
 col1, col2, col3 = st.columns([1,2,1])
 
 with col2:
-    st.image("logo.png", width=120)
+    st.image("logo.png", width=400)
 
 # =========================================
 # HEADER
