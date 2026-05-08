@@ -6,7 +6,8 @@ import streamlit as st
 st.set_page_config(
     page_title="HR Management System",
     page_icon="logo.png",
-    layout="wide"
+    layout="wide",
+    initial_sidebar_state="collapsed"   # COLLAPSIBLE SIDEBAR
 )
 
 # =========================================
@@ -15,48 +16,54 @@ st.set_page_config(
 st.markdown("""
 <style>
 
+    /* MAIN BACKGROUND */
     .stApp {
-        background-color: #000000;
-        color: white;
+        background-color: white;
+        color: #111827;
     }
 
+    /* HEADER */
     .main-title {
         font-size: 42px;
-        font-weight: bold;
+        font-weight: 800;
         text-align: center;
-        color: #ff7a00;
+        color: #ff6b00;
         margin-top: 10px;
         margin-bottom: 5px;
     }
 
     .sub-title {
         text-align: center;
-        color: #d1d5db;
+        color: #6b7280;
         font-size: 18px;
         margin-bottom: 30px;
     }
 
+    /* CARDS */
     .card {
-        background-color: #111111;
+        background-color: #ffffff;
         padding: 25px;
-        border-radius: 15px;
-        border-left: 6px solid #ff7a00;
-        box-shadow: 0px 4px 15px rgba(255,122,0,0.2);
+        border-radius: 18px;
+        border-left: 6px solid #ff6b00;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
         margin-bottom: 20px;
+        border: 1px solid #f3f4f6;
     }
 
     .card h3 {
-        color: #ff7a00;
+        color: #ff6b00;
         margin-bottom: 10px;
     }
 
     .card p {
-        color: #f1f1f1;
+        color: #4b5563;
         font-size: 15px;
+        line-height: 1.6;
     }
 
+    /* BUTTONS */
     .stButton > button {
-        background-color: #ff7a00;
+        background-color: #ff6b00;
         color: white;
         border-radius: 10px;
         border: none;
@@ -67,20 +74,50 @@ st.markdown("""
     }
 
     .stButton > button:hover {
-        background-color: #e66d00;
+        background-color: #e65f00;
         color: white;
     }
 
+    /* LINK BUTTONS */
+    div.stLinkButton > a {
+        background-color: #ff6b00 !important;
+        color: white !important;
+        border-radius: 10px !important;
+        border: none !important;
+        padding: 12px 18px !important;
+        font-weight: bold !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    div.stLinkButton > a:hover {
+        background-color: #e65f00 !important;
+        color: white !important;
+    }
+
+    /* SIDEBAR */
     section[data-testid="stSidebar"] {
-        background-color: #111111;
+        background-color: #ffffff;
+        border-right: 1px solid #e5e7eb;
     }
 
     .sidebar-title {
-        color: #ff7a00;
+        color: #ff6b00;
         font-size: 22px;
         font-weight: bold;
         text-align: center;
         margin-bottom: 20px;
+    }
+
+    /* RADIO BUTTON TEXT */
+    .stRadio label {
+        color: #111827 !important;
+        font-weight: 500;
+    }
+
+    /* REMOVE TOP GAP */
+    .block-container {
+        padding-top: 1.5rem;
     }
 
 </style>
@@ -89,7 +126,10 @@ st.markdown("""
 # =========================================
 # LOGO
 # =========================================
-st.image("logo.png", width=120)
+col1, col2, col3 = st.columns([1,2,1])
+
+with col2:
+    st.image("logo.png", width=120)
 
 # =========================================
 # LINKS
@@ -197,7 +237,7 @@ if page == "🏠 Home":
 # =========================================
 elif page == "📅 Attendance":
 
-    st.title("📅 Attendance Management System")
+    st.title("📅 Attendance Management")
 
     st.components.v1.iframe(
         links["Attendance"],
