@@ -51,7 +51,7 @@ st.markdown("""
     }
 
     .card h3 {
-        color: #ff6b00;
+        color: #00000;
         margin-bottom: 10px;
     }
 
