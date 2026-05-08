@@ -7,7 +7,7 @@ st.set_page_config(
     page_title="HR Management System",
     page_icon="logo.png",
     layout="wide",
-    initial_sidebar_state="collapsed"   # COLLAPSIBLE SIDEBAR
+    initial_sidebar_state="collapsed"
 )
 
 # =========================================
@@ -16,15 +16,13 @@ st.set_page_config(
 st.markdown("""
 <style>
 
-    /* MAIN BACKGROUND */
     .stApp {
         background-color: white;
-        color: #111827;
     }
 
     /* HEADER */
     .main-title {
-        font-size: 42px;
+        font-size: 48px;
         font-weight: 800;
         text-align: center;
         color: #ff6b00;
@@ -36,49 +34,38 @@ st.markdown("""
         text-align: center;
         color: #6b7280;
         font-size: 18px;
-        margin-bottom: 30px;
+        margin-bottom: 40px;
     }
 
-    /* CARDS */
+    /* CARD DESIGN */
     .card {
         background-color: #ffffff;
         padding: 25px;
         border-radius: 18px;
         border-left: 6px solid #ff6b00;
         box-shadow: 0px 4px 15px rgba(0,0,0,0.08);
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         border: 1px solid #f3f4f6;
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 20px rgba(0,0,0,0.12);
     }
 
     .card h3 {
-        color: #00000;
+        color: #ff6b00;
         margin-bottom: 10px;
     }
 
     .card p {
         color: #4b5563;
-        font-size: 15px;
         line-height: 1.6;
+        font-size: 15px;
     }
 
     /* BUTTONS */
-    .stButton > button {
-        background-color: #ff6b00;
-        color: white;
-        border-radius: 10px;
-        border: none;
-        height: 45px;
-        width: 100%;
-        font-weight: bold;
-        font-size: 15px;
-    }
-
-    .stButton > button:hover {
-        background-color: #e65f00;
-        color: white;
-    }
-
-    /* LINK BUTTONS */
     div.stLinkButton > a {
         background-color: #ff6b00 !important;
         color: white !important;
@@ -95,27 +82,7 @@ st.markdown("""
         color: white !important;
     }
 
-    /* SIDEBAR */
-    section[data-testid="stSidebar"] {
-        background-color: #ffffff;
-        border-right: 1px solid #e5e7eb;
-    }
-
-    .sidebar-title {
-        color: #ff6b00;
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    /* RADIO BUTTON TEXT */
-    .stRadio label {
-        color: #111827 !important;
-        font-weight: 500;
-    }
-
-    /* REMOVE TOP GAP */
+    /* REMOVE EXTRA TOP SPACE */
     .block-container {
         padding-top: 1.5rem;
     }
@@ -132,16 +99,6 @@ with col2:
     st.image("logo.png", width=120)
 
 # =========================================
-# LINKS
-# =========================================
-links = {
-    "Attendance": "https://your-attendance-app.streamlit.app/",
-    "Employee Performance": "https://your-performance-app.streamlit.app/",
-    "Appraisal": "https://your-appraisal-app.streamlit.app/",
-    "KPI": "https://your-kpi-app.streamlit.app/"
-}
-
-# =========================================
 # HEADER
 # =========================================
 st.markdown(
@@ -155,127 +112,84 @@ st.markdown(
 )
 
 # =========================================
-# SIDEBAR
+# LINKS
 # =========================================
-st.sidebar.markdown(
-    '<div class="sidebar-title">Navigation</div>',
-    unsafe_allow_html=True
-)
-
-page = st.sidebar.radio(
-    "",
-    [
-        "🏠 Home",
-        "📅 Attendance",
-        "📈 Employee Performance",
-        "📝 Appraisal",
-        "📊 KPI"
-    ]
-)
+links = {
+    "Attendance": "https://your-attendance-app.streamlit.app/",
+    "Employee Performance": "https://your-performance-app.streamlit.app/",
+    "Appraisal": "https://your-appraisal-app.streamlit.app/",
+    "KPI": "https://your-kpi-app.streamlit.app/"
+}
 
 # =========================================
 # HOME PAGE
 # =========================================
-if page == "🏠 Home":
+col1, col2 = st.columns(2)
 
-    col1, col2 = st.columns(2)
+with col1:
 
-    with col1:
+    st.markdown("""
+    <div class="card">
+        <h3>📅 Attendance Management</h3>
+        <p>
+            Track employee attendance records, punctuality,
+            daily check-ins and workforce presence.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-        st.markdown("""
-        <div class="card">
-            <h3>📅 Attendance Management</h3>
-            <p>
-                Track employee attendance records, punctuality,
-                and daily workforce presence.
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.link_button("Open Attendance System", links["Attendance"])
-
-        st.markdown("""
-        <div class="card">
-            <h3>📝 Employee Appraisal</h3>
-            <p>
-                Conduct staff appraisals, evaluations,
-                and performance reviews efficiently.
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.link_button("Open Appraisal System", links["Appraisal"])
-
-    with col2:
-
-        st.markdown("""
-        <div class="card">
-            <h3>📈 Employee Performance</h3>
-            <p>
-                Analyze employee productivity, targets,
-                and overall work performance.
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.link_button("Open Performance System", links["Employee Performance"])
-
-        st.markdown("""
-        <div class="card">
-            <h3>📊 KPI Dashboard</h3>
-            <p>
-                Monitor company HR KPIs, employee metrics,
-                and organizational growth indicators.
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.link_button("Open KPI Dashboard", links["KPI"])
-
-# =========================================
-# ATTENDANCE PAGE
-# =========================================
-elif page == "📅 Attendance":
-
-    st.title("📅 Attendance Management")
-
-    st.components.v1.iframe(
-        links["Attendance"],
-        height=800
+    st.link_button(
+        "Open Attendance System",
+        links["Attendance"]
     )
 
-# =========================================
-# PERFORMANCE PAGE
-# =========================================
-elif page == "📈 Employee Performance":
+    st.markdown("<br>", unsafe_allow_html=True)
 
-    st.title("📈 Employee Performance")
+    st.markdown("""
+    <div class="card">
+        <h3>📝 Employee Appraisal</h3>
+        <p>
+            Conduct employee appraisals, staff evaluations,
+            reviews and assessment processes efficiently.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.components.v1.iframe(
-        links["Employee Performance"],
-        height=800
+    st.link_button(
+        "Open Appraisal System",
+        links["Appraisal"]
     )
 
-# =========================================
-# APPRAISAL PAGE
-# =========================================
-elif page == "📝 Appraisal":
+with col2:
 
-    st.title("📝 Employee Appraisal")
+    st.markdown("""
+    <div class="card">
+        <h3>📈 Employee Performance</h3>
+        <p>
+            Analyze employee productivity, targets,
+            work efficiency and overall performance.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.components.v1.iframe(
-        links["Appraisal"],
-        height=800
+    st.link_button(
+        "Open Performance System",
+        links["Employee Performance"]
     )
 
-# =========================================
-# KPI PAGE
-# =========================================
-elif page == "📊 KPI":
+    st.markdown("<br>", unsafe_allow_html=True)
 
-    st.title("📊 KPI Dashboard")
+    st.markdown("""
+    <div class="card">
+        <h3>📊 KPI Dashboard</h3>
+        <p>
+            Monitor HR KPIs, employee metrics,
+            business growth and workforce insights.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    st.components.v1.iframe(
-        links["KPI"],
-        height=800
+    st.link_button(
+        "Open KPI Dashboard",
+        links["KPI"]
     )
