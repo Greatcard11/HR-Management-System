@@ -64,37 +64,21 @@ st.markdown("""
         line-height: 1.6;
         font-size: 15px;
     }
-
-    # =========================================
-# BUTTON FIX
-# =========================================
-st.markdown("""
-<style>
-
-/* STREAMLIT LINK BUTTON FIX */
-div.stLinkButton a {
-    background-color: #ff6b00 !important;
+/* BUTTONS */
+div.stLinkButton > a {
+    background: #ff6b00 !important;
     color: white !important;
-    padding: 0.75rem 1rem !important;
     border-radius: 10px !important;
-    text-decoration: none !important;
-    font-weight: 600 !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
     border: none !important;
+    padding: 12px 18px !important;
+    font-weight: bold !important;
+    text-align: center !important;
+    width: 100% !important;
+    display: block !important;
+    text-decoration: none !important;
     opacity: 1 !important;
     visibility: visible !important;
 }
-
-div.stLinkButton a:hover {
-    background-color: #e65f00 !important;
-    color: white !important;
-}
-
-</style>
-""", unsafe_allow_html=True)
 
     /* REMOVE EXTRA TOP SPACE */
     .block-container {
