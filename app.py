@@ -100,7 +100,7 @@ with col2:
 # HEADER
 # =========================================
 st.markdown(
-    '<div class="main-title">HR MANAGEMENT SYSTEM</div>',
+    '<div class="main-title">HR/ADMIN MANAGEMENT SYSTEM</div>',
     unsafe_allow_html=True
 )
 
