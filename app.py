@@ -114,6 +114,7 @@ st.markdown(
 # =========================================
 links = {
     "Attendance": "https://staff-attendance.streamlit.app/",
+    "Weekly Report": "https://weeklyreportss.streamlit.app/",
     "Employee Performance": "https://link/",
     "Appraisal": "https://link/",
     "KPI": "https://link/"
@@ -141,7 +142,7 @@ with col1:
         links["Attendance"]
     )
 
-     st.markdown("""
+    st.markdown("""
     <div class="card">
         <h3>📅 Weekly Report</h3>
         <p>
@@ -151,8 +152,8 @@ with col1:
     """, unsafe_allow_html=True)
 
     st.link_button(
-        "Open Attendance System",
-        links["Attendance"]
+        "Open Weekly Report",
+        links["Weekly Report"]
     )
 
     st.markdown("<br>", unsafe_allow_html=True)
