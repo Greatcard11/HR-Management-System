@@ -114,9 +114,9 @@ st.markdown(
 # =========================================
 links = {
     "Attendance": "https://staff-attendance.streamlit.app/",
-    "Employee Performance": "https://your-performance-app.streamlit.app/",
-    "Appraisal": "https://your-appraisal-app.streamlit.app/",
-    "KPI": "https://your-kpi-app.streamlit.app/"
+    "Employee Performance": "https://link/",
+    "Appraisal": "https://link/",
+    "KPI": "https://link/"
 }
 
 # =========================================
@@ -132,6 +132,20 @@ with col1:
         <p>
             Track employee attendance records, punctuality,
             daily check-ins and workforce presence.
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
+
+    st.link_button(
+        "Open Attendance System",
+        links["Attendance"]
+    )
+
+     st.markdown("""
+    <div class="card">
+        <h3>📅 Weekly Report</h3>
+        <p>
+            Tracks employee weekly activities rates the highest and lowest performers.
         </p>
     </div>
     """, unsafe_allow_html=True)
