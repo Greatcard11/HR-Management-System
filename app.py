@@ -115,8 +115,8 @@ st.markdown(
 links = {
     "Attendance": "https://staff-attendance.streamlit.app/",
     "Business Department Appraisal": "https://business-department.streamlit.app/",
-    "Staff Performance Appraisal": "https://https://staff-performance.streamlit.app/",
-    "Appraisal": "https://link/",
+    "Staff Performance Appraisal": "https://staff-performance.streamlit.app/",
+    "Admin Panel": "https://management-panel.streamlit.app/",
     "KPI": "https://link/"
 }
 
