@@ -115,7 +115,7 @@ st.markdown(
 links = {
     "Attendance": "https://staff-attendance.streamlit.app/",
     "Business Department Appraisal": "https://business-department.streamlit.app/",
-    "Employee Performance": "https://link/",
+    "Staff Performance Appraisal": "https://https://staff-performance.streamlit.app/",
     "Appraisal": "https://link/",
     "KPI": "https://link/"
 }
@@ -160,34 +160,33 @@ with col1:
 
     st.markdown("""
     <div class="card">
-        <h3>📝 Employee Appraisal</h3>
+        <h3>📝 Staff Performance Appraisal</h3>
         <p>
-            Conduct employee appraisals, staff evaluations,
+           Analyze employee productivity, targets, Conduct staff appraisals, staff evaluations,
             reviews and assessment processes efficiently.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     st.link_button(
-        "Open Appraisal System",
-        links["Appraisal"]
+        "Open Staff Performance Appraisal",
+        links["Staff Performance Appraisal"]
     )
 
 with col2:
 
     st.markdown("""
     <div class="card">
-        <h3>📈 Employee Performance</h3>
+        <h3>📈 Admin Panel</h3>
         <p>
-            Analyze employee productivity, targets,
-            work efficiency and overall performance.
+            Administrative and office activities.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     st.link_button(
-        "Open Performance System",
-        links["Employee Performance"]
+        "Open Admin Panel",
+        links["Admin Panel"]
     )
 
     st.markdown("<br>", unsafe_allow_html=True)
