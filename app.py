@@ -114,7 +114,7 @@ st.markdown(
 # =========================================
 links = {
     "Attendance": "https://staff-attendance.streamlit.app/",
-    "Daily Report": "https://dailyreportss.streamlit.app/",
+    "Business Department Appraisal": "https://business-department.streamlit.app/",
     "Employee Performance": "https://link/",
     "Appraisal": "https://link/",
     "KPI": "https://link/"
@@ -144,16 +144,16 @@ with col1:
 
     st.markdown("""
     <div class="card">
-        <h3>📅 Daily Report</h3>
+        <h3>📅 Business Department Appraisal</h3>
         <p>
-            Tracks employee weekly activities rates the highest and lowest performers.
+            Tracks business department productivity, targets, efficiency and overall performance.
         </p>
     </div>
     """, unsafe_allow_html=True)
 
     st.link_button(
-        "Open Daily Report",
-        links["Daily Report"]
+        "Open Business Department Appraisal",
+        links["Business Department Appraisal"]
     )
 
     st.markdown("<br>", unsafe_allow_html=True)
