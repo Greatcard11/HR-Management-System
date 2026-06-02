@@ -95,7 +95,6 @@ with col2:
 
 st.markdown('<div class="main-title">HR/ADMIN MANAGEMENT SYSTEM</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-title">Smart HR Operations & Employee Analytics Platform</div>', unsafe_allow_html=True)
-st.write("DEBUG SECRETS:", st.secrets)
 
 # =========================================
 # APP LINKS & HUB PLATFORM
