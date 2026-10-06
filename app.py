@@ -102,6 +102,7 @@ st.markdown('<div class="sub-title">Smart HR Operations & Employee Analytics Pla
 links = {
     "Attendance": "https://staff-attendance.streamlit.app/",
     "Business Department Appraisal": "https://business-department.streamlit.app/",
+    "Perso Unit": "https://prod-perso.streamlit.app/",
     "Staff Performance Appraisal": "https://staff-performance.streamlit.app/",
     "Admin Panel": "https://management-panel.streamlit.app/"
 }
@@ -138,7 +139,17 @@ with right_col:
     """, unsafe_allow_html=True)
     st.link_button("Open Business Department Appraisal", links["Business Department Appraisal"])
 
-    # Section 4: Admin Panel
+
+    # Section 4: Perso Unit
+    st.markdown("""
+    <div class="card">
+        <h3>💼 Perso Unit</h3>
+        <p>Tracks perso unit productivity, targets, efficiency, and overall performance.</p>
+    </div>
+    """, unsafe_allow_html=True)
+    st.link_button("Open Perso Unit", links["Perso Unit"])
+
+    # Section 5: Admin Panel
     st.markdown("""
     <div class="card">
         <h3>🛠️ Admin Panel</h3>
