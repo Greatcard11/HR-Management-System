@@ -101,9 +101,9 @@ st.markdown('<div class="sub-title">Smart HR Operations & Employee Analytics Pla
 # =========================================
 links = {
     "Attendance": "https://staff-attendance.streamlit.app/",
-    "Business Department Appraisal": "https://business-department.streamlit.app/",
+    "Business Department": "https://business-department.streamlit.app/",
     "Perso Unit": "https://prod-perso.streamlit.app/",
-    "Staff Performance Appraisal": "https://staff-performance.streamlit.app/",
+    "Staff Daily Performance": "https://staff-performance.streamlit.app/",
     "Admin Panel": "https://management-panel.streamlit.app/"
 }
 
@@ -123,21 +123,21 @@ with left_col:
     # Section 2: Staff Performance
     st.markdown("""
     <div class="card">
-        <h3>📝 Staff Performance Appraisal</h3>
+        <h3>📝 Staff Daily Performance</h3>
         <p>Analyze employee productivity, conduct staff appraisals, reviews, and assessment processes efficiently.</p>
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Open Staff Performance Appraisal", links["Staff Performance Appraisal"])
+    st.link_button("Open Staff Daily Performance", links["Staff Daily Performance"])
 
 with right_col:
     # Section 3: Business Department
     st.markdown("""
     <div class="card">
-        <h3>💼 Business Department Appraisal</h3>
+        <h3>💼 Business Department</h3>
         <p>Tracks business department productivity, targets, efficiency, and overall departmental performance.</p>
     </div>
     """, unsafe_allow_html=True)
-    st.link_button("Open Business Department Appraisal", links["Business Department Appraisal"])
+    st.link_button("Open Business Department Appraisal", links["Business Department"])
 
 
     # Section 4: Perso Unit
